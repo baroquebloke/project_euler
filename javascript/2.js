@@ -7,16 +7,17 @@
 function main() {
   var x = 1
   var y = 1
-  var z = 0
+  var fib = 0
   var total = 0
   while (y <= 4000000) {
-    z = y
+    fib = y
     y += x
     if (y % 2 == 0) {
       total += y;
     }
-    x = z
+    x = fib
   }
   return total
 }
 console.log(main())
+

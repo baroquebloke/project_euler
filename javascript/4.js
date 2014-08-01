@@ -3,11 +3,13 @@
 //Find the largest palindrome made from the product of two 3-digit numbers.
 //
 //answer: 906609
-//time: 0.345s
-//  
+//time: 0.101s
+// 
+// *edit: refactored*
 
 function reverse(s) {
-  return s.split('').reverse().join('');
+  var s = s.toString();
+  return parseInt(s.split('').reverse().join(''));
 }
 
 function palind_num() {
@@ -15,7 +17,10 @@ function palind_num() {
   for (var x = 999; x > 99; x--) {
     for (var y = x; y > 99; y--) {
       var num = x * y;
-      if (num.toString() === reverse(num.toString())) {
+      if (num < is_pal) {
+        break;
+      }
+      if (num === reverse(num)) {
         if (is_pal < num) {
           is_pal = num;
         }
