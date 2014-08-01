@@ -1,5 +1,5 @@
 # this will find the sum of all even numbers in the fibonacci sequesnce
-#whose values do not exceed 4,000,000
+# whose values do not exceed 4,000,000
 
 def main():
     old = 1
